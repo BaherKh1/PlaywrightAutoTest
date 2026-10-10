@@ -1,0 +1,31 @@
+{
+  "name": "playwright-learning",
+  "version": "1.0.0",
+  "description": "A hands-on Playwright + TypeScript project that covers everything you need to learn",
+  "private": true,
+  "scripts": {
+    "install:browsers": "playwright install --with-deps",
+    "test": "playwright test --project=chromium",
+    "test:all-browsers": "playwright test",
+    "test:headed": "playwright test --project=chromium --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --project=chromium --debug",
+    "test:smoke": "playwright test --project=chromium --grep @smoke",
+    "test:mobile": "playwright test --project=mobile-chrome",
+    "test:api": "playwright test --project=chromium tests/06-api",
+    "test:update-snapshots": "playwright test --project=chromium tests/11-visual --update-snapshots",
+    "codegen": "playwright codegen https://www.saucedemo.com",
+    "report": "playwright show-report",
+    "trace": "playwright show-trace",
+    "list": "playwright test --list",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@faker-js/faker": "^9.0.0",
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^22.0.0",
+    "dotenv": "^16.4.0",
+    "typescript": "^5.6.0"
+  }
+}
